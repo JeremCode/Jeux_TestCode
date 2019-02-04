@@ -1,0 +1,52 @@
+body, div, ul {
+    margin : 0;
+    padding: 0;
+}
+body {
+    background-color : #F5F1A1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+.global{
+    width:1200px;
+    margin: 0 auto;
+}
+.entete {
+   background-color : #A5A565; 
+    height : 80px;
+    padding: 10px;
+    font-size: 14px;
+    
+}
+.blocmenu {
+     background-color : #115AA5; 
+}
+
+.pied {
+     background-color : #B550A1;
+    padding: 10px;
+}
+#menu {
+    display: flex ;
+    list-style-type: none;
+}
+#menu li {
+    flex : 0 1 auto;
+}
+
+#menu li a, #menu li a:visited{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color : black;
+}
+
+#menu li:hover {
+     background-color : #5AD240; 
+    color : brown;
+    
+    
+}

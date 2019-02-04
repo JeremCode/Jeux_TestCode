@@ -1,0 +1,59 @@
+body, div, ul {
+    margin : 0;
+    padding: 0;
+}
+body {
+    background-color : #F5F1A1;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+.global{
+    width:1200px;
+    margin: 0 auto;
+    background-color : #6DC133;
+    letter-spacing : -0.31rem;
+}
+.global *{
+    letter-spacing : normal;
+}
+.entete {
+    height : 80px;
+    padding: 10px;
+    background-color : #F0AAAA ; 
+    font-size: 14px;
+    
+}
+.blocmenu, .contenu {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+.blocmenu  {
+   width : 200px;
+}
+.contenu {
+     width : 1001px;
+     padding: 10px;
+    padding-left: 30px;
+    background-color : white;   
+}
+.pied {
+    background-color : #A5A565; 
+    padding: 10px;
+}
+#menu {
+    list-style-type : none;
+}
+
+#menu li a, #menu li a:visited {
+    display: block;
+    padding: 15px 20px;
+    font-size: 14px;   
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background-color : #A5A565; 
+    animation : none;
+     text-decoration: none;
+}

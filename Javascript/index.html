@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Test Javascript</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <input id="text2"  type="text" value="quoi?" ><br/>
+            <input type="button" id="huy" value="oh" class="Draga"><br/>
+        <div>
+            <p id="myP">Ceci est ma div, <a>Un lien</a> et <strong>une portion emphase</strong> tout cela en HTML :-) Mais passons au javascript<br/><br/></p>
+            
+            <input id="bouton" type="button" value="bout" onclick="copie()">
+            <input id="txtA" type="text">
+            <p id="txtB"></p>
+        </div>
+        <p id="tt">ahaqsh</p>
+        <script src=script.js></script>
+        <div id="cube">
+            <script type="text/javascript">
+                function fonction_canvas()
+                {
+                    var balise_canvas = document.getElementById('image1');
+                    if (balise_canvas.getContext){
+                        var context2D = balise_canvas.getContext('2d');
+                        context2D.fillStyle = "rgb(67,220,0)";
+                        context2D.fillRect(1,1,300,300);
+                    }
+                }
+                window.onload = fonction_canvas;
+            </script>
+            <canvas id="image1"></canvas>
+        </div>    
+    
+    </body>
+</html>

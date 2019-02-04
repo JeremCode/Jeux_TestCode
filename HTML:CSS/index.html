@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <!-- Ce site est utilisé pour regrouper des fonctionnalités html5 et css3-->
+    <HEAD>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="image/icone.jpg">
+        <link rel="stylesheet" href="style.css">
+        <title>Jeux de code</title>
+    </HEAD>
+    <BODY>
+        <div id="overlay"></div>
+        <h1 id="titregeneral">Hello you</h1>   
+        <aside class="navgauche">
+            <figure id="imgacc">
+                <figcaption>Sur la plage abandonnée</figcaption>
+                <a  href='image/Accueil.jpg'>
+                <img id='imagfoc'  src='image/Accueil.jpg' title="En pleine chaleur" alt="C'est beau">
+                </a>
+            </figure>
+            <div id="cache">pas vu</div>
+            <lien>
+                <ul>Liens <strong>utiles</strong>
+                    <li><a href="http://www.colourlovers.com" accesskey="a" title="Couleur">Association de couleurs  </a> <em> Raccourci Alt+A </em> </li>
+                    <li><a href="http://www.framasoft.org" target="_blank">Communauté des logiciels libres</a></li>
+                    <li><a href="http://www.w3.org" target="_self">Règles de codage du web</a></li>
+                    <li><a href="http://www.lea-linux.org"target="_top">Entraide des utilisateurs Linux</a></li> 
+                    <li><a href="http://ljouanneau.com/lab/html5/demodragdrop.html"target="_top">Demo drag and drop</a></li>
+                    <li><a href="http://framazic.org"target="_top">Musique libre de droit</a></li>
+                    <li><a href="http://chrispederick.com/work/web-developer"target="_top">Infos sur debogueur Firefox</a></li>
+                </ul>
+            </lien>
+            <lien>
+                <ol>Liens <strong>vers d'autres sites</strong>
+                    <li value="19"><a href="http://www.cabanouz.fr">Cabanouz</a></li>
+                </ol>
+            </lien>
+            <table border="1" draggable="true">
+                <tr>
+                    <th>Element</th>
+                    <th>Niveau de maitrise sur 5 niveaux</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>1</td>
+                </tr>
+                 <tr>
+                    <td>PHP</td>
+                    <td>1</td>
+                </tr>
+                 <tr>
+                    <td>Symfony</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td colspan="2"> Niveau pas terrible</td>
+                </tr>
+            </table>
+        </aside> 
+        <main>
+             <p class="Chapitre">Testons ici un peu de code Html</p>
+            <div>C'est lien sont issu du livre : <em>Premiers pas en <mark>CSS3</mark> & <mark>HTML5</mark></em></div>
+            <s>Ceci n'est pas une rature</s>
+            <div>Voici un exemple de balise div.</div>
+            <div>La petite soeur div.</div>
+            <span>Une balise span. Ca conserve sa place à l'intérieur d'un paragraphe.</span>
+            <dl> Voila des annonces
+                <dt>Numéro 1</dt>
+                    <dd>Annonce numéro 1</dd>
+                <dt>Numéro 2</dt>
+                    <dd>Annonce numéro 2</dd>
+            </dl>
+            <p class="Chapitre">Etat jour</p><br/>
+            <div id="unebelleboite">boite
+            <p><time datetime="DD-MM-YYYYThh:mm:ss" value="">18/08/17</time> à <time>12:00</time></p>
+            <ul>    
+                <li >Forme : <progress  min="0" max="10" value="7"></progress></li>
+                <li>Idiocratie : <progress max="5" value="4.5"></progress> sur 5 </li>
+                <li>Soif : <meter min="0" max="100" value="82"></meter></li>
+                </ul> 
+            <section>
+                <h4>Section 1</h4>
+                <p> Ceci est la section 1</p>
+            </section>
+            <section>
+                <h4>Section 2</h4>
+                <p> Ceci est la section 2</p>
+            </section>
+            <section>
+                <h4>Section 3</h4>
+                <div contenteditable="true">Voici le contenu d'une balise div modifiable ... On peut y ecrire  ce que l'on veut mais cela ne signifie pas qu'on en fera quelque chose. Ainsi si j'écrit lrem ipsul, et ben ça sert à rien. Voici ce que j'avais à dire sur cette balise.</div>
+            </section>
+            </div>
+            <p class="Chapitre">Partie ecriture</p>
+            <code draggable="true">
+                <div>Je suis un robot</div>     
+            </code>
+            <samp>
+                <div>J'écris comme un robot</div>
+            </samp>
+            <p class="Chapitre">La musique</p>
+             <audio controls src="musique/mamusique.mp3"> Votre navigateur ne reconnait pas se format audio</audio>
+            <p class="Chapitre">La vidéo</p>
+            <video controls src="video/video.mp4"> Votre navigateur ne reconnait pas se format video</video>
+            <div><p class="Chapitre">Une carte</p>
+                <iframe width="400" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://cartosm.eu/map?lon=6.2038474805258&lat=43.090493857467&zoom=10&width=400&height=350&mark=true&nav=true&pan=true&zb=inout&style=default&icon=down"><p>L'iframe n'est pas reconnue</p></iframe>
+                <details>
+                    <summary>Source :</summary>
+                    <p>Adresse : <a href="http://cartosm.eu/">cartosm</a></p>
+                </details>
+            </div>
+            <div>
+            <p class="Chapitre">Balise canvas avec un peu de javascript</p>
+            <script type="text/javascript">
+                function fonction_canvas()
+                {
+                    var balise_canvas = document.getElementById('image1');
+                    if (balise_canvas.getContext){
+                        var context2D = balise_canvas.getContext('2d');
+                        context2D.fillStyle = "rgb(67,220,0)";
+                        context2D.fillRect(100,100,100,100);
+                    }
+                }
+                window.onload = fonction_canvas;
+                //Affichage de l'image
+       
+              var links = document.getElementById('imagfoc');
+            var linksLen = links.length;
+               
+                    links.addEventListener('click',function(e){
+                        e.preventDefault();
+                        displayImg(e.currentTarget);
+                    });
+                
+                function displayImg(link){
+                    var img = new Image(), overlay = document.getElementById('overlay');
+                    img.addEventListener('load',function(){
+                        overlay.innerHTML = '';
+                        overlay.appendChild(img);
+                    });
+                    img.src = link.href;
+                    overlay.style.display = 'block';
+                    overlay.innerHTML = '<span>Chargement en cours ... </span>';
+                }
+                document.getElementById('overlay').addEventListener('click', function(e){
+                    e.currentTarget.style.display = 'none';
+                });
+        
+                
+            </script>
+            <p>Ci dessous un rectangle construit à l'aide d'un canvas</p>
+            <canvas id="image1">Votre navigateur ne peut pas affiché ce canvas</canvas>
+            </div>
+        </main>
+        
+        <form method="post" action="index.php" target="_blank" autocomplete="on">      <p class="form">Un formulaire</p>
+            <fieldset>
+                <div >Quelques questions :</div><br/>
+                <label>Pseudo</label>
+                <input type="text" name="pseudo" required="required"/><br/>
+                <label>Password</label>
+                <input type="password" name="password"/><br/>
+                <label>Un message :</label>
+                <textarea name="message">A toi d'ecrire ...</textarea><br/>
+                <label>Choisis un animal</label><br/>
+                <label>chien</label>
+                <input type="radio" name="animal" value="chien"/><br/>
+                <label>chat</label>
+                <input type="radio" name="animal" value="chat"/><br/>
+                <label>poisson</label>
+                <input type="radio" name="animal" value="poisson"/><br/>
+                <label>poule</label>
+                <input type="radio" name="animal" value="poule"/><br/>
+                <label>Quels fruits aimes tu</label><br/>
+                <label>orange</label>
+                <input type="checkbox" name="orange" value="orange"/><br/>
+                <label>banane</label>
+                <input type="checkbox" name="banane" value="banane"/><br/>
+                <label>pomme</label>
+                <input type="checkbox" name="pomme" value="pomme"/><br/>
+                <label>ananas</label>
+                <input type="checkbox" name="ananas" value="ananas"/><br/>
+                <label>Quel est ta taille ?</label><br/>
+                <select name="taille">
+                    <option value="grand">grand</option>
+                    <option value="moyen">moyen</option>
+                    <option value="petit">petit</option>
+                </select><br/>
+                 <label>Es tu déjà allé dans ces pays ?</label><br/>
+                <select name="pays[]" multiple size="3">
+                    <optgroup label="proche">
+                        <option value="france">france</option>
+                        <option value="belgique">belgique</option>
+                    </optgroup>
+                    <optgroup label="lointain">
+                        <option value="espagne">espagne</option>
+                        <option value="angleterre">angleterre</option>
+                        <option value="portugal">portugal</option>
+                        <option value="allemagne">allemagne</option>
+                    </optgroup>
+                </select><br/>
+                <label>Choisir une couleur</label><br/>
+                <input type="color" name="couleur"/><br/>
+                <label>Ecris ton chiffre préféré</label><br/>
+                <input type="number"  maxlength="1" name="chiffreprefere"/><br/>
+                <label>Envoyer ces infos à un ami</label><br/>
+                <input type="email" name="email" required="required"/><br/>
+                <label>Humeur de 0 à 10</label><br/>
+                <input type="range" name="humeur"  min="0" max="10" value="5"/><br/>
+                <label>Date</label><br/>
+                <input type="date" name="date"/><br/>
+                <label>Vehicule</label><br/>
+                <input list="vehicule"/>
+                <datalist id="vehicule">
+                    <option value="voiture">
+                    <option value="velo">
+                    <option value="moto">
+                    <option value="skateboard">
+                </datalist><br/><br/>
+                <input type="reset" value="Remise à zero"/><br/><br/>
+                <input type="submit" value="Envoyer"/>
+            </fieldset>
+        </form>
+    </BODY>
+    <FOOTER>
+        <hr/>
+        <a href="#titregeneral">Revenir au debut</a><br/>
+        <i><small>Création : Jege</small></i>  <a href="mailto:5jlcep5@gmail.com"><i>Envoyer moi un mail</i></a>
+    </FOOTER>
+</html>

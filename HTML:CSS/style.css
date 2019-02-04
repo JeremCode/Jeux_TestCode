@@ -1,0 +1,435 @@
+/* Exemple style css
+
+pour appeler la feuille de style dans html :
+ - <link rel="stylesheet" href="style.css">
+ - @import url("monstyle.css");
+
+Appel du style :
+balise : balise  { }
+classe : .classe { }
+identifiant : #identifiant { }
+
+Option :
+inherit: - crée un héritage 
+typer la priorité à normal annule l'héritage
+
+La taille peut s'exprimer en différentes unités :
+rem : lergeur d'une majuscule dans l'element racine
+em : largeur d'une majuscule dans l'element parent
+px : pixel
+% : % de la taille de l'ecran
+vw : pourcentage de largeur de la fenêtre
+vh : pourcentage de hauteur de la fenêtre 
+
+les orientations :
+top, left, bottom, right
+On peut en mettre plusieurs dans la définition d'une propriété :
+2 - haut bas (identique) et droite gauche (identique)
+3 - haut , droite et gauche (identique), bas
+4 - haut, bas, droite, gauche
+
+Pseudo Classe :
+:hover - élement survolé
+:link - lien hypertexte
+:visited - lien visité
+:active - élement activé
+:first-child - premier enfant d'une balise
+:last-child - dernier enfant d'une balise
+:focus - élement en cour de "sélection"
+:nomattribut(valeur attribut) - tous les élements qui possèdent l'attribut et sa valeur
+::first-letter - premiere lettre
+::first-line - premiere ligne
+::before - avant la balise spécifiée
+::after - apres la balise specifiée
+   Ces 2 pseudos permettent d'ajouter du contenu en utilisant la propriété content: "texte"; ou content: url('.../logo.png');
+:not([attribut=valeur]) - sert a ne pas prendre les balises ayant l'attribut = valeur
+:checked - l'element coché
+:enable - element activé
+:disable - element desactivé
+:first-of-type - premier enfant d'un type donné
+:only-child - dernier enfant
+:nth-child -nieme enfant
+:nth-last-child -nieme enfant en partant de la fin
+:empty - balise vide
+
+odd : impair
+even : paire
+
+Hierachie :
+balise1 > balise2 - Le style s'applique à la première balise2 à l'intérieur d'une balise1
+balise1 + balise2 - Le style s'applique à chaque balise2 qui suit une balise fermant /balise1
+balise[attribut="valeur"] - Le style s'apllique à la balise dont l'attribut = valeur ou possèdant l'attribut si la valeur n'est pas écrite
+* - Le style s'applique à tout
+~ - Indique le voisinage entre 2 balises permet de faire appliquer une règles à desblocs parents
+|= sert a indiquer que l'attribut peut etre suivi par un tiret
+^= l'attribut commence par
+$= l'attribut termine par
+*= l'attribut contient le mot
+
+
+Ordre de priorité des styles :
+Celui ci est définit par un compteur de 4 chiffres : 
+no 1 : si style prioritaire (style en ligne dans le code ou possédant la balise !important)
+no 2 : nombres d'identifiants
+no 3 : nombres de classes
+no 4 : nombre d'éléments séparés par des espaces dans le selecteur
+La concatenation de no 1 2 3 4 donne une valeur qui hiérarchise l'application des styles.
+
+----- Mise en forme du texte -----
+
+Les propriétés :
+font-style : autres propriété appliqué au texte -h
+font-variant : tout en petite majuscule -h
+font-weight : graisse de la police -h
+font-size : la taille -h
+line-height : 
+font-family : la police -h
+ font : permet d'apliquer ces balises adans une meme ligne
+
+letter-spacing : gere l'espacement entre les lignes -h
+word-spacing : gere l'espacement entre les mots -h
+white-space : gestion du retour à la ligne -h
+color : couleur -h
+text-decoration : applique un effet au texte
+text-transform : gere majuscule / minuscule -h
+background-color : surlignage de lettre 
+vertical-align : décalage vertiacal et horizontal
+quote : affiche des guillements ouverture, fermeture puis niveaux indentés -h
+direction : sens de l'ecriture -h
+
+**CSS3
+opacity : gere la transparence
+color: rgba(255,255,255,0.5); couleur avec un effet de transparence
+    Il existe une codification de coloration hsl "en francais TSL (Teinte 'Degres -> 360', Saturation '%', Luminosite '%')"
+text-decoration : effets pour le texte le surlignage du texte 
+    -color : couleur
+    -style : type de trait
+    -line : position du trait
+front-stretch :largeur des caracteres
+font-size-adjust : ajuste la taille des caracteres pour des polices différentes
+    crée un rapport entre la majuscule et le minuscule
+@font-face : permet d'envoyer une police d'ecriture à un navigateuren donnant un nom et une adresse pour la récupérer désigné par src, url, local pour vérifier qu'elle existe sur le client.
+text-shadow : creer un ombrage autour du texte avec spécification de la police.
+appearance : permet à un élément html de prendre l'apparence d'un autre élément
+    ex : appearance : push-button;
+         appearance : desktop; 
+    voir toutes les autres propriétés existantes
+text-overflow : affiche 3 points pour signaler une coupure de dépassement de bloc
+word-break : permet la coupur d'un mot trop long -h
+border-image : permet de crée un encadrement à partir d'une image.
+    L'image est découpé en 8 zones
+    4 parametres : url / % image a conserver / epaisseur bordure / debordement sur chaque bord
+
+    
+
+
+
+
+----- Gestion des blocs -----
+
+text-align : modifie l'alignement horizontal -h
+text-indent : retrait de la première ligne  -h
+line-height : espacement entre les lignes -h
+
+----- autres -----
+
+cursor : modification d'apprence du curseur
+counter-reset : définit un compteur en le nommant et en lui donnant une valeur
+counter-increment : définit la méhode d'incrementation du compteur
+
+---- bordure -----
+
+border-style : Style de trait de la bordure
+border-width : epaisseur de la bordure
+border-color : couleur de la bordure
+    border : permet d'appliqer ces 3 balises dans une seule
+Il est possible d'etre plus précis a aposant l'orientation juste apres border
+outline : affiche une bordure qui se superpose a l'element meme parametre que border
+outline-offset : ecart entre la bordure outline et celle de border
+
+----- arriere plan s'applique aux elements de type bloc -----
+
+background-color : couleur d arriere plan
+background-image : url() applique une image en arriere plan
+background-repeat : repetition de l'image d'arriere plan
+background-position  : positionne l'arriere plan râce à des mesures ou des noms
+background-attachment : gere le comportement de l'image en fonction du scroll
+    background : permet d'appliquer toutes ces balises dans une même ligne
+
+----- Liste a puce -----
+
+list-style-type : définit le type de puce a utilies -h
+list-style-image : url() remplace la puce par des images -h
+list-style-position : positionne la puce endehors ou dans le paragraphe -h
+    list-style : permet d'appliquer toutes ces balises dans une même ligne -h
+
+----- Les tableau -----
+
+table-layout : définit la largeur du tableau (auto ou fixed) -h
+border-collapse : fusionne les bordures qui se touchent -h
+border-spacing : espacement entre les bordures -h
+empty-cells : afficher ou masquer le contour des cellule vides -h
+caption-side : positionnement du titre du tableau -h
+vertical-align : gere l'alignement d'une cellule -h
+
+----- La gestion des blocs -----
+
+margin : marge exterieures (s'utilise avec les orientations)
+padding : marges interieures (s'utilise avec les orientations)
+width : largeur
+height : hauteur
+min (width ou height) = dimension mini
+max (width ou height) = dimension maxi
+display : modife le type d'élement (block, inligne, table, ...)
+z-index : permet de définir le niveau de priorité dans l'empilement des blocs si ceux ci se superposent
+
+
+----- Le positionnement des blocs
+Les blocs sont positionné par apport à leur point haut gauche
+Il y a 3 positions possibles :
+    juxtaposé, fixe par rapport au conteneur, fixe par rapport à l'ecran
+position : donne le type de positionnement du bloc
+ normal ou static : comportement par defaut
+ relative : decalage par rapport à sa position normal
+ absolue : declagae par rapport au bloc conteneur
+ fixed : position fixe par rapport à l'écran
+ float : positionnement vertical a gauche ou droite 
+
+relative :
+    s'utilise ensuite avec les balise de direction pour indiquer le decalage a partir du haut et/ou de la gauche
+    exemple 
+        position : relative;
+        left : 50 %; decalage a partir de la gauche
+        top : 12 em;
+
+
+float :
+    La dimension d'un bloc conteneur ne prends pas en compte les dimensions du bloc flottant.
+    Le bloc suivant sera donc aligné sur le bloc flottant.
+    Pour éviter ça on utilise la balise 
+    clear : cette propriété autorise ou non les elements flottant de part et d'autre (left, right, none autorisé des 2 côtés, both interdit des 2 côtés)
+
+visibility : masque un élement en conservant son positionnement
+overflow : gère l'affichage ou non du texte qui déborde du bloc
+clip-path : découpe une image à une zone de visibilité
+border-radius : crée des coins arrondis 
+box-shadow : crée une ombre sous la boite
+box-size : ajuste les dimensions d'une boite selon certaines références A utiliser de préference
+resize : permet de redimensionner un bloc lorsque la propriété overflow a été défini
+background : image1, image2 ; permet de mettre plusieurs images
+    origin : permet de définir son point d'ancrage
+    clip : ajustement derriere la bordure
+    size : modifier la dimension
+    attachement : définit si l'image est fixe ou bouge avec le scroll
+linear-gradient : permet de définir un dégradé linéaire
+radial-gradient : définit un dégradé elliptique
+    On peut ajouter en préfixe la propriété : repeating pour repeter l'effet
+column-count : Permet de construire un tableau dans une balise
+column-width :Défini la largeur des colonnes
+    columns : permet d'appliquer les 2 précedentes règles
+column-gap : gere l 'espacement entre les colonnes
+column-rule : espacement dans une cellule
+    style : type de ligne
+    width : largeur de ligne
+    color : couleur de ligne
+column-fill : equilibrage du texte dans les colonnes
+column-span : titre sur la colonne
+
+Utilisation de la flexbox
+
+display : flex ou inline-flex (en ligne ou en colonne)
+flex-direction : modifie l'orientation des blocs
+flex-wrap : gere le comportement des blocs les uns par rapport aux autres
+flex-flow :
+    regroupe flex-direction et flex-wrap
+    justify-content : alignement des bloc
+align-items : alignement vertical ou horizontal
+align-self : permeet a un bloc d'avoir un alignement specifique
+flex-grow : augmentation des blocs
+flex-shrink : reduction des blocs 
+flex-basis : dimension de base pour les box
+    Ces propriétés peuvent être regroupé dans une propriété flex
+order : permet de modifier l'order d'affichage des box
+
+fonction de transformation
+matrix : transformation matricielle
+translateX : decalage en X
+translateY : decalage en Y
+translate(30px,30px) : decalage en X et en Y
+scaleX : changement d'echelle en X
+scaleY : changement d'echelle en Y
+scale():changement d'echelle e X et Y
+rotate(40deg) : rotation dans le sens des aiguilles d'une montre
+skewX(angle) : déformation le long de l'abscisse
+skewY(angle) : déformation le long de l'ordonné
+skew : déformation en X et Y
+
+pour la 3D
+on peut ajouter une 3 dimension le Z
+on rajoutera 3d au regroupement
+perspective : ajoute un effet de perspective
+perspective-origin : gestion de l'effet de perspective
+transform-style : applati les élements contenu dans un element 3D
+backface-visibility : permet de cacher la face arriere des objets 3D
+
+animation
+transition : permet de gerer la vitesse en seconde de l'animation
+    on sépare les propriétés par une virgule 
+    si aucune propriété n'est spécifié cela s'applique à toutes
+transition-duration : regle la durée d'une transition
+transition-timing-function : regle la façon dont la transition se répartit dans le temps
+transition-delay : delai avant le declenchement de la transition
+    toutes ces propriétés peuvent etre regroupés dans la balise transition
+@keyframe : peret de déclarer des animations qui seront appeles avec la propriété animation ou animation-name
+animation-duration : définit la durée totale de l'animation
+animation-timing-function : regle la façon dont l'animation se répartir dans le temps
+animation-delay : delai d'attente pour le declenchement de l'animation
+animation-iteration-count : repetition de l'animation
+animation-direction : sens de déroulement de l'animation
+animation-fill-mode : modifie les états initiaux et finaux de l'objet
+animation-play-state : permet de mettre en pause une animation a declenceher avec du js
+    toutes ces propriété peuvent être regroupé avec la propriété animation
+
+
+
+
+
+**********  CSS3  **********
+
+
+
+
+****************************
+
+
+*/
+* {
+    animation: descente 2s;;
+}
+
+#overlay {
+    display: none;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    text-align : center;
+    background-color: rgba(0,0,0,0.1);
+}
+#overlay image{
+    margin-top : 100px;
+}
+
+
+
+@keyframes descente{
+    from  {
+  background-color : black; }
+
+    }
+    to {
+    background-color : white ;}
+}
+
+@keyframes image{
+    from {
+        transform:   matrix(0.87,-0.5,0,0.87,0.5,1);}
+    to {
+    transform:   matrix(0.57,-0.5,0,0.87,0.5,1);}
+}
+
+
+a {
+    transition: color 4s , font-size 2s, font-weight 5s;
+}
+
+a:hover{
+    color : red;
+    font-size: 20px;
+    font-weight : bold ;
+}
+
+#unebelleboite {
+    border: solid 15px rgba(40,80,25) ;
+    background-color : rgba(40,134,50,0.3);
+    border-radius: 30px 80px 80px 30px;
+    padding : 15px;
+    outline : 4px solid rgba(160,50,70, 0.4);
+    outline-offset: 3px;
+    margin-left :10%;
+    box-shadow: -13px -13px 5px blue;
+    resize : both;
+    overflow: scroll;
+    width: 400px;
+    height: 200px;
+     transition-property : background  2s, border 5s ;
+    transition-duration: 7s;
+}
+
+#unebelleboite:hover {
+   
+    background-color: aquamarine;
+    border: solid 15px rgba(40,80,25,0) ;
+    transition-duration :3s;
+    outline : 4px solid rgba(10,150,170, 0.5);
+    box-shadow: 10px 10px 5px red;
+}
+
+#titregeneral {
+ text-align: center;
+ background-color: aqua;
+ margin: 30px;
+ padding: 5px;
+}
+
+P.Chapitre {
+    top : -5px ;
+    left : 10%;
+    font-family : Verdana, Arial; /*propriété hérité*/
+    font-size  : 22px;
+    font-style: oblique;
+    text-align: center;
+}
+
+p.form {
+    left : 30%;
+    font-family : Verdana, Arial; /*propriété hérité*/
+    font-size  : 22px;
+    width :30%;
+}
+form{
+    float: right;
+    padding : 5px;
+}
+
+aside.navgauche {
+    float : left;
+    border : solid 2px green;
+    padding : 13px;
+    margin : 7px;
+    width : 20%;
+    clear:both;
+    border-radius : 25px 15px / 55px 15px ;
+}
+main{
+    float : left;
+    width :50%;
+}
+#imgacc{
+ vertical-align: center;
+ margin :3px;
+ animation : image 3s;
+}
+
+#imgacc:hover {
+    transform:  matrix(0.87,-0.5,0,0.87,0.5,1);
+    transition: all 2s;
+}
+
+footer {
+    clear:both;
+}
+#cache {
+    visibility: hidden;
+}
