@@ -1,0 +1,145 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(180deg,#a2d5e3,#f1b1e5);
+    height: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 24;
+    color: #f8A1D3;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btn{
+    display: block;
+    padding: 15px 30;
+    margin: 0 auto;
+    font-size: 18;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    outline: none;
+    background-color: #a8a8a8;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 6px blueviolet;
+}
+
+.btn:hover{
+    box-shadow: 0 4px blueviolet;
+    top: 2px; 
+}
+
+.btn:active{
+    box-shadow: 0 0px blueviolet;
+    top: 6px; 
+}
+
+.btnfiltre {
+    content: 'coucou';
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background: #040;
+    padding: none;
+    margin: none;
+    border-bottom: hidden;
+    border-left: hidden;
+    margin: 40px 0px 0px 10px;
+    border-radius: 10px 10px 0px 0;
+}
+
+.btnfiltre:active::before{
+    width: 100px;
+    height: 30px;
+    background: #080;
+}
+
+.fenfiltre {
+    position: relative;
+    width: auto;
+    height: 100px;
+    background: #A00;
+    animation-duration: 2s;
+    margin: 0px 10px;
+    border-radius: 0px 10px 10px 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+.filtre{ 
+    position:relative;
+    height: auto;
+}
+
+.hidden{
+    animation-duration: 2s;
+    display: none;
+}
+
+.logobox {
+    position: relative;
+    margin: 10 auto;
+    height: 100px;
+    width: 80%;
+    border-style: solid;
+    border-radius: 5px;
+    border-color:lightcoral;
+}
+
+.logo{
+    display: inline-block;
+    width: auto;
+    height: 200px;
+    background-color: rgb(78, 107, 206);
+    
+}
+
+.niva {
+    animation-delay: 0s;
+    animation : spin 7s;
+    animation-iteration-count: infinite;
+    width: 49%;
+
+ }
+.nivb {
+    animation : spin 5s;
+    animation-iteration-count: infinite;
+    width: 49%;
+   }
+    
+@keyframes spin{
+    0% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%  ;
+        scale: 40%;
+    }
+    30%{
+        border-radius: 50% 50% 0% 100% / 100% 100% 0% 0%  ;
+        scale: 50%;
+    }
+    50%{
+        border-radius: 50% 45% 45% 50% / 70% 75% 25% 30%   ;
+        scale: 55%;
+    }
+    65%{
+        border-radius: 10% 40% 50% 40% / 20% 40% 50% 0%  ;
+        scale: 50%;
+    }
+    90%{
+        border-radius: 55% 45% 45% 50% / 20% 20% 80% 80%  ;
+        scale:45%;
+    }
+    100%{
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%  ;
+        scale: 40%
+    }
+}

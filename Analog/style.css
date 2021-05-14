@@ -1,0 +1,78 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #f1f1e5;
+}
+
+.navbar {
+    height: 3.8vw;
+    width: 100%;
+    background: cadetblue;
+}
+
+nav ul  {
+    position: relative;
+    width: 90%;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 3vw;
+}
+
+.navlien a  {
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 0.3vw;
+    font: italic small-caps bold calc(10px + 1.3vw) / 4vw system-ui ;
+    transition: 0.5s;
+}
+
+a::after {
+    content: "";
+    display: block;
+    width: 0vw;
+    height: 2px;
+    border-radius: 2px;
+    background: #aaa;
+    transition: width 0.2s ease-out;
+}
+
+a:hover{
+    color: gold;
+}
+
+a:hover::after{
+    width: 100%;
+}
+
+#logo {
+    top: 0.2vw;
+    left: 2vw;
+    position: fixed;
+    color: #ffffff;
+    font: small-caps bold 2vw/2 cursive ;
+}
+
+#logoanim {
+    position:fixed;
+    height: 6.5vw;
+    width: 9vw;
+    background: rgb(83, 43, 43);
+    top: 0.3vw;
+    left: 3.8vw;
+    opacity: 0.3;
+    transform: translate(-1.1px,-5px) rotate(180deg) scale(-80%);
+    border-radius: 51% 49% 100% 0% / 100% 45% 55% 0%;
+    transition: 0.8s;
+}
+
+#logoanim:hover{
+    transform: rotate(-180deg) translate3d(5px,10px, 80px);
+    opacity: 0.8;
+}
