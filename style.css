@@ -1,0 +1,39 @@
+*,::after,::before{
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    height: 100%;
+}
+
+nav{
+    height : 80px;
+    background: #322;
+    border: 1px;
+    border-radius: 0% 0% 15% 15%;
+    padding: 15px 15px;
+}
+
+h1 {
+    text-align: center;
+    color: seashell;
+}
+
+.navul{
+    position: relative;
+    width:100%;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+.navul li{
+    display: inline-block;
+}
+
+.navul li a{
+    text-decoration: none;
+    color: rgb(172, 171, 108);
+    padding: 10px;
+    font: small-caps bold 16px sans-serif;
+}
